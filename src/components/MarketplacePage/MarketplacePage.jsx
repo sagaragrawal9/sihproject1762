@@ -13,7 +13,7 @@ const generateItems = (count) => {
       name: `Philatelic Item ${i}`,
       category: categories[Math.floor(Math.random() * categories.length)],
       price: Math.floor(Math.random() * 10000) + 100,
-      image: `/placeholder.svg?height=200&width=200&text=Item+${i}`,
+      image: `/src/assets/unnamed2.jpeg`,
       description: `This is a detailed description for Philatelic Item ${i}. It's a unique piece for collectors.`,
       rating: (Math.random() * 2 + 3).toFixed(1)
     })

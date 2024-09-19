@@ -1,5 +1,8 @@
 import React, { useState, useRef } from 'react'
 import { WalletIcon, ShoppingCartIcon, CalendarIcon, ChevronLeftIcon, ChevronRightIcon } from 'lucide-react'
+import myImage from '/src/assets/unnamed2.jpeg'
+import myImage3 from '/src/assets/unnamed3.jpeg'
+import myImage2 from '/src/assets/unnamed4.jpeg'
 
 // UI Components
 const Button = ({ children, className = '', variant = 'default', size = 'default', ...props }) => {
@@ -51,7 +54,7 @@ const Avatar = ({ children, className = '', ...props }) => (
 )
 
 const AvatarImage = ({ src, alt = '', className = '', ...props }) => (
-  <img className={`aspect-square h-full w-full ${className}`} src={src} alt={alt} {...props} />
+  <img className={`aspect-square h-full w-full ${className}`} src={myImage} alt={alt} {...props} />
 )
 
 const AvatarFallback = ({ children, className = '', ...props }) => (
@@ -119,11 +122,11 @@ export default function PhilatelyIndia() {
   ]
 
   const featuredCategories = [
-    { name: "Stamps", image: "/placeholder.svg?height=200&width=300&text=Stamps" },
-    { name: "First Day Covers", image: "/placeholder.svg?height=200&width=300&text=FDC" },
-    { name: "Covers", image: "/placeholder.svg?height=200&width=300&text=Covers" },
-    { name: "Postcards", image: "/placeholder.svg?height=200&width=300&text=Postcards" },
-    { name: "Other Items", image: "/placeholder.svg?height=200&width=300&text=Other" },
+    { name: "Stamps", image: myImage2 },
+    { name: "First Day Covers", image: myImage2 },
+    { name: "Covers", image: myImage2 },
+    { name: "Postcards", image: myImage2 },
+    { name: "Other Items", image: myImage2 },
   ]
 
   const communityActivities = [
@@ -158,7 +161,7 @@ export default function PhilatelyIndia() {
       {heroSlides.map((slide, index) => (
         <CarouselItem key={index}>
           <div className="relative h-[400px] rounded-lg overflow-hidden">
-            <img src="/placeholder.svg?height=400&width=1200&text=Philately" alt="Philately" className="w-full h-full object-cover" />
+            <img src={myImage} alt="Philately" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white p-6">
               <h2 className="text-4xl font-bold mb-4 text-center">{slide.title}</h2>
               <p className="text-xl mb-8 text-center">{slide.description}</p>
@@ -252,7 +255,7 @@ export default function PhilatelyIndia() {
           <p>Our platform connects collectors and enthusiasts from across India, providing access to a wide range of philatelic items, from rare stamps to historical covers. We aim to foster a thriving community of philatelists and preserve the rich heritage of Indian postage.</p>
         </div>
         <div className="md:w-1/2">
-          <img src="https://via.placeholder.com/800x500?text=About+Us" alt="About Us" className="w-full h-auto object-cover rounded-lg" />
+          <img src={myImage3} alt="About Us" className="w-full h-auto object-cover rounded-lg" />
         </div>
       </div>
     </CardContent>

@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import { Stamp, Search, Bell, Mail, Menu, Wallet, ChevronRight, MapPin, Calendar as CalendarIcon, Filter, ArrowLeft, ArrowRight } from "lucide-react"
-
-const Button = ({ children, className, ...props }) => (
-  <button
-    className={`px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 ${className}`}
-    {...props}
-  >
-    {children}
-  </button>
-)
+import myImage from '/src/assets/unnamed.png'
+function Button({ children, className, ...props }) {
+  return (
+    <button
+      className={`px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 ${className}`}
+      {...props}
+    >
+      {children}
+    </button>
+  );
+}
 
 const Card = ({ children, className, ...props }) => (
   <div className={`bg-white rounded-lg shadow-md overflow-hidden ${className}`} {...props}>
@@ -137,7 +139,7 @@ function PhilatelyIndia() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[1, 2, 3, 4, 5, 6].map((i) => (
               <Card key={i} className="flex flex-col">
-                <img src={`/placeholder.svg?height=200&width=400&text=Cancellation+${i}`} alt={`Cancellation ${i}`} className="w-full h-48 object-cover" />
+                <img src= {myImage} className="w-full h-48 object-cover" />
                 <div className="p-4 flex-grow">
                   <h3 className="text-xl font-semibold mb-2">Independence Day Celebration 2024</h3>
                   <p className="text-gray-600 mb-4">

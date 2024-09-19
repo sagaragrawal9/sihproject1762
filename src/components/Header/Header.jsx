@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { WalletIcon, ShoppingCartIcon, User, LogOut } from 'lucide-react';
 import { useCart } from '../CartContext/CartContext';
+import myImage3 from '/src/assets/unnamed3.jpeg'
 
 const Button = ({ children, className = '', variant = 'default', size = 'default', ...props }) => {
   const baseStyles = 'inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background relative';
@@ -74,7 +75,7 @@ export default function Header() {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link to="/Home">
           <div className="flex items-center">
-            <img src="/placeholder.svg?height=40&width=40&text=Logo" alt="PhilatelyIndia Logo" className="mr-2" />
+            {/* <img src= {myImage3} alt="PhilatelyIndia Logo" className="mr-2" /> */}
             <h1 className="text-2xl font-bold">PhilatelyIndia</h1>
           </div>
         </Link>
